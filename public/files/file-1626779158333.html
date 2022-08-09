@@ -1,0 +1,213 @@
+<!--
+  Student Name:
+  Student Number:
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FlowTow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+
+    <!-- Include Handlebars from a CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="./js/main.js" type=module defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div id="logo"></div>
+        <nav class="navbar navbar-inverse navbar-fixed-top ">
+            <ul>
+                <li><a href="#" data-target="#" class="nav-link">Home</a></li>
+                <li><a href="#" data-target="!/all-posts" class="nav-link">All Posts</a></li>
+                <li><a href="#" data-target="!/my-posts" class="nav-link">My Posts</a></li>
+                <li><a href="#" data-target="whatis" class="nav-link">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div id="form">
+        <form name="myForm" class="main-form" id="loginform">
+            <label for="user">username:</label><br>
+            <input type="text" id="user" name="username" placeholder="Username" required><br>
+            <label for="password">Password:</label><br>
+            <input type="text" id="pass" name="password" placeholder="Password" required><br><br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <!--Main Home Page -->
+
+    <section class="page  active" id="#">
+        <h1 class="set-User"></h1>
+        <div id="content">
+
+            <div id="heading">
+
+                <hgroup>
+                    <h1 style="text-align: center;">Welcome to FlowTow!</h1>
+                </hgroup>
+
+
+
+            </div>
+        </div>
+        <div id="single">
+            <div class="row">
+                <table id="threepost" style="width:100%">
+                    <tr>
+                        <div class="random">
+                            <div class="flowtow">
+
+                            </div>
+                        </div>
+
+
+            </div>
+            </tr>
+            </table>
+
+        </div>
+        <div id="single">
+            <div class="row">
+                <div class="column" id="recent" style="background-color:#aaa;">
+                    <p style="text-align: center;">Recent Posts</p>
+                    <table id="singletable" style="width:30%">
+
+                    </table>
+                </div>
+                <div class="column" id="recent" style="background-color:#aaa;">
+                    <p style="text-align: center;">Popular Posts</p>
+                    <table id="popular" style="width:30%">
+
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!--End of Home Page -->
+
+    <!--ALl Post Page-->
+
+    <section class="page" id="!/all-posts">
+        <h1 class="set-User"></h1>
+        <h1 style="text-align: center;">Welcome to FlowTow!</h1>
+        <h2 style="text-align: center;"> All Post </h2>
+
+        <div class="all-post">
+            <div id="single1">
+                <div class="row">
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <!--My Post-->
+    <section class="page" id="!/my-posts">
+        <h1 class="set-User"></h1>
+
+        <h1 style="text-align: center;">Welcome to FlowTow!</h1>
+        <h2 style="text-align: center;"> My Post </h2>
+
+        <div class="set-post">
+            <form id="postform" name="postAddedForm">
+                <label>New Post (URL)</label><br>
+                <input type="text" name="p_url" required>
+                <br>
+                <label>Caption: </label><br>
+                <input type="text" name="p_caption" required>
+                <br><br> <button type="submit">Create a Post</button>
+            </form>
+        </div>
+        <h1 id="login-message">Please Login First</h1>
+        <div class="my-post">
+
+        </div>
+
+
+    </section>
+
+
+
+
+    <!--About Section -->
+    <section class="page" id="whatis">
+        <h1 class="set-User"></h1>
+        <div>
+            <p style="font-size: larger; font-weight: bold; text-align: center;;">What is FlowTow</p>
+            <p style="font-size: medium;  text-align: center;">FlowTow is a new, exciting image sharing service like nothing you have seen before!</p>
+            <p style="font-size: medium; text-align: center;">FlowTow supports logging in users,posting images,making comments and veiwing images in various ways</p>
+        </div>
+
+    </section>
+
+    <!--Single Post -->
+
+    <section id="#!/post/" class="page  ">
+        <div id="heading">
+            <h1 class="set-User"></h1>
+            <hgroup>
+                <h1 style="text-align: center;">Welcome to FlowTow!</h1>
+            </hgroup>
+        </div>
+
+        <div id="single">
+            <div class="row">
+                <div class="container">
+                    <div class="si-post">
+                        <img src="http://robohash.org/11d03afc-8796-43f8-b733-12cf2b905cf2 " class="singlePost-img" alt="">
+                        <p>
+                            Penelope Curtis by Alice 2021-03-25T02:59:35.481Z
+                        </p>
+                        <p class="p-like ">
+                            10
+                        </p>
+                        <button class="btn-like " type="submit " formmethod="post ">Like</button>
+                        <!-- <td id="p_likes ">10</td>
+                        <td id="likebutton "><button type="submit " formmethod="post ">Like</button></td> -->
+                        <div class="comment-list ">
+                            <ul>
+                                <li>Coffeegdjndihjithkoptkhotrkpok</li>
+                                <li>Tea</li>
+                                <li>Milk</li>
+                                <li>Coffee</li>
+                                <li>Tea</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!--Comment Form -->
+                    <form name="commentForm" id="commentform" style="float: left; ">
+                        <label for="user ">Comment:</label><br>
+                        <input type="text " id="comm " name="c_content" required><br>
+                        <button type="submit">Add a Comment</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!--Single Post Ended-->
+
+
+    <!-- Templates -->
+    <div id="target "></div>
+</body>
+
+</html>
